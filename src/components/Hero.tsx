@@ -30,7 +30,7 @@ const Hero = () => {
           Crafting Excellence in Wood since 2010
         </p>
         <p className="text-lg md:text-xl mb-12 text-gray-300 max-w-2xl mx-auto"> 
-          Specialists in Premium Wooden Doors & Windows and custom wood work.<br></br>
+          Specialists in Premium Wooden Doors & Window's and custom wood work.<br></br>
           We are selling all types of Wooden doors and windows. <br></br>
           <br></br>
           Building Demolition also done By us.
