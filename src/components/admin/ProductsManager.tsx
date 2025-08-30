@@ -10,8 +10,7 @@ const ProductsManager = () => {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
-    image_url: '',
-    category: 'general'
+    image_url: ''
   });
 
   useEffect(() => {
@@ -53,7 +52,7 @@ const ProductsManager = () => {
         if (error) throw error;
       }
 
-      setFormData({ title: '', description: '', image_url: '', category: 'general' });
+      setFormData({ title: '', description: '', image_url: ''});
       setEditingProduct(null);
       setShowAddForm(false);
       fetchProducts();
@@ -67,8 +66,7 @@ const ProductsManager = () => {
     setFormData({
       title: product.title,
       description: product.description,
-      image_url: product.image_url,
-      category: product.category
+      image_url: product.image_url
     });
     setShowAddForm(true);
   };
@@ -104,7 +102,7 @@ const ProductsManager = () => {
   };
 
   const resetForm = () => {
-    setFormData({ title: '', description: '', image_url: '', category: 'general' });
+    setFormData({ title: '', description: '', image_url: '' });
     setEditingProduct(null);
     setShowAddForm(false);
   };
@@ -160,24 +158,7 @@ const ProductsManager = () => {
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Category
-                </label>
-                <select
-                  value={formData.category}
-                  onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                >
-                  <option value="general">General</option>
-                  <option value="doors">Doors</option>
-                  <option value="windows">Windows</option>
-                  <option value="furniture">Furniture</option>
-                  <option value="cabinets">Cabinets</option>
-                  <option value="panels">Panels</option>
-                  <option value="outdoor">Outdoor</option>
-                </select>
-              </div>
+             
             </div>
 
             <div>
@@ -248,7 +229,7 @@ const ProductsManager = () => {
                 </span>
               </div>
               <p className="text-gray-600 text-sm mb-3 line-clamp-3">{product.description}</p>
-              <p className="text-xs text-gray-500 mb-4">Category: {product.category}</p>
+              
               
               <div className="flex space-x-2">
                 <button
